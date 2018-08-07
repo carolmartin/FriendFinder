@@ -26,26 +26,6 @@ app.use(bodyParser.json());
 require("./routing/apiRoutes")(app);
 require("./routing/htmlRoutes")(app);
 
-// Routes
-// =============================================================
-// the below routes will be coded out as being done in routing/htmlRoutes and apiRoutes
-
-// // Basic route that sends the user first to the AJAX Page
-// app.get("/", function(req, res) {
-//   res.sendFile(path.join(__dirname+"/public", "home.html"));
-// });
-
-// app.get("/survey", function(req, res) {
-//   res.sendFile(path.join(__dirname+"/public", "survey.html"));
-// });
-
-
-// Displays all friends commented out as moved to apiRequest.js 
-// app.get("/api/friends", function(req, res) {
-//   return res.json(friends);
-// });
-
-
 
 // Starts the server to begin listening
 // =============================================================

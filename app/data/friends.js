@@ -5,7 +5,7 @@
 var friends = [
     {
       name: "Sponge Bob",
-      photo: "/Spongebob.png",
+      photo: "Spongebob.png",
       scores: [
           1,
           1,
@@ -21,7 +21,7 @@ var friends = [
     },
     {
       name: "Patrick",
-      photo: "/Patrick_Star.png",
+      photo: "Patrick_Star.png",
       scores: [
           5,
           1,
@@ -37,7 +37,7 @@ var friends = [
     },
     {
       name: "Squidward",
-      photo: "/squidward.png",
+      photo: "squidward.png",
       scores: [
           5,
           1,

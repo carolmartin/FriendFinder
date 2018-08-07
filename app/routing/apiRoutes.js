@@ -42,6 +42,7 @@ module.exports = function(app) {
       // between the friends and users scores. 
       // 
       for (var x = 0; x < 10; x++){
+        console.log(" ------- x is looping through scores at index: " + x + "--------");
         console.log("friends score index " + friendsData[i].scores[x]);
         console.log("user score: " + user.scores[x]);
       
@@ -55,44 +56,27 @@ module.exports = function(app) {
         totalDiff[i] += diff;
       }
     }
-    //find the index of the lowest toltalDiff and thsi will be the most compatable friend
+    //find the index of the lowest toltalDiff and this will be the most compatable friend
     var lowestDiff = 50;
+    var indexLowest;
     for (i=0; i < totalDiff.length; i++) {
       if (totalDiff[i] < lowestDiff) {
         lowestDiff = parseInt(totalDiff[i]);
+        indexLowest = i;
+
       }
     }
 
-    console.log("closest friend match is index " + i + " with match score difference of " + lowestDiff);
+    console.log("closest friend match is index " + indexLowest + " with match score difference of " + lowestDiff);
 
 
     friendsData.push(req.body);
     console.log("in apiRoutes post");
+    console.log("Best matching friend friendsData(indexLowest) " + friendsData[indexLowest]);
     
+    res.send(friendsData[indexLowest]);
 
   });
 
-    // API POST Requests
-  // Below code handles when a user submits a form and thus submits data to the server.
-  // In each of the below cases, when a user submits form data (a JSON object)
-  // ...the JSON is pushed to the appropriate JavaScript array
-  // (ex. User fills out a survey... this data is then sent to an array and then the  server compares values 
-  // on the friends array.
-  // ---------------------------------------------------------------------------
 
-
-  //code below is from Lizzy's Hot Resturant will delete later
-//   app.post("/api/tables", function(req, res) {
-//     // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-//     // It will do this by sending out the value "true" have a table
-//     // req.body is available since we're using the body-parser middleware
-//     if (tableData.length < 5) {
-//       tableData.push(req.body);
-//       res.json(true);
-//     }
-//     else {
-//       waitListData.push(req.body);
-//       res.json(false);
-//     }
-//   });
 }

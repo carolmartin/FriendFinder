@@ -22,17 +22,5 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/survey.html"));
   });
 
-// commented out code from HotRestaruant - will delete if above code ok
-//   app.get("/tables", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/tables.html"));
-//   });
 
-//   app.get("/reserve", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/reserve.html"));
-//   });
-
-//   // If no matching route is found default to home
-//   app.get("*", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/home.html"));
-//   });
 };
